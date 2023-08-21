@@ -432,7 +432,7 @@ module m {
     }
 
     public fun withdraw(coin: &mut Coin, amount: u64): Coin {
-        assert!(coin.balance >= amount, 1000);
+        assert!(coin.value >= amount, 1000);
         coin.value = coin.value - amount;
         Coin { value: amount }
     }
